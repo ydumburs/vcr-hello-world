@@ -1,0 +1,16 @@
+project:
+  name: vcr-hello-world
+instance:
+  name: dev
+  runtime: nodejs16
+  region: aws.euw1
+  application-id: d50abebb-4f5e-46d2-8463-48b56d3dd746
+  entrypoint: [node, server.js]
+  environment:
+    - name: YOURVAR1
+      value: "something-secret"
+    - name: YOURVAR2
+      value: "string value"
+debug:
+  name: debug
+  entrypoint: [sh, debug.sh]
